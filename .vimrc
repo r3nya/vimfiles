@@ -11,7 +11,13 @@ call vundle#rc()
 map <C-n> :NERDTreeToggle<CR>
 
 " let Vundle manage Vundle
-" required! 
+" required!
+Bundle 'tomasr/molokai'
+Bundle 'Markdown' 
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-rails.git'
-Bundle 'scrooloose/nerdtree.git'
+Bundle 'tpope/vim-rails'
+Bundle 'scrooloose/nerdtree'
+
+filetype plugin indent on
+
+colorscheme molokai
