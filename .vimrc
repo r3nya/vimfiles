@@ -18,8 +18,9 @@ Bundle 'jnurmine/Zenburn'
 Bundle 'tpope/vim-rails'
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
 colorscheme zenburn
-
+let g:airline_theme=bubblegun
