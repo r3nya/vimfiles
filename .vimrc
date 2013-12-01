@@ -7,6 +7,12 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+set cursorline
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 " maps
 map <F2> :NERDTreeToggle<CR>
 
