@@ -7,6 +7,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+set guioptions-=egimrLtT
 set cursorline
 
 set tabstop=2
@@ -22,7 +23,6 @@ Bundle 'Markdown'
 Bundle 'gmarik/vundle'
 Bundle 'jnurmine/Zenburn'
 Bundle 'tpope/vim-rails'
-Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 
