@@ -6,6 +6,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'sjl/gundo.vim'
 
 " == Autocomplete plugins ==
 " WIP
@@ -18,3 +19,6 @@ Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascri
 
 " == Other tools ==
 Plug 'scrooloose/syntastic'
+
+" == Color scheme ==
+Plug 'mhartington/oceanic-next'
