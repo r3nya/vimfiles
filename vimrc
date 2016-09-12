@@ -1,3 +1,14 @@
+" == Plugins ==
+call plug#begin()
+
+try
+  source ~/.vimrc.plugs
+catch
+endtry
+
+call plug#end()
+
+
 " == Editor settings ==
 syntax enable
 
@@ -7,7 +18,7 @@ endif
 
 set t_Co=256 " Enable 256 colors
 
-colorscheme OceanicNext
+colorscheme oceanicnext
 set background=dark
 
 " Store swap files in to fixed location
@@ -26,16 +37,6 @@ set ruler " Always display cursor position
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-" == Plugins ==
-call plug#begin()
-
-try
-  source ~/.vimrc.plugs
-catch
-endtry
-
-call plug#end()
 
 " == scrooloose/syntastic ==
 set statusline+=%#warningmsg#
