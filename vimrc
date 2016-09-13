@@ -16,10 +16,16 @@ if &history < 1000
   set history=1000
 endif
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/\.git/*,*/node_modules/*
+
 set t_Co=256 " Enable 256 colors
 
 colorscheme oceanicnext
 set background=dark
+
+" enable to highlight invisible characters
+setlocal list
+setlocal listchars=tab:\|\ ,trail:·
 
 " Store swap files in to fixed location
 set noswapfile
@@ -43,6 +49,9 @@ set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
+" == sheerun/vim-polyglot ==
+let g:polyglot_disabled = ['blade', 'elixir', 'glsl', 'kotlin', 'vala', 'vbnet']
+
 " == jlanzarotta/bufexplorer ==
 nmap <F12> <Esc>:BufExplorer<cr>
 vmap <F12> <esc>:BufExplorer<cr>
@@ -61,8 +70,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " == mxw/vim-jsx ==
 let g:jsx_ext_required = 0
-
-" === Keybindings ===
 
 " == junegunn/fzf ==
 nnoremap <C-T> :FZF<CR>
@@ -84,5 +91,10 @@ let g:oceanic_next_terminal_italic = 1
 " enable bold, disabled by default
 let g:oceanic_next_terminal_bold = 1
 
-" == sjl/gundo.vim ==
-nnoremap <F5> :GundoToggle<CR>
+" == mbbill/undotree ==
+nnoremap <F5> :UndotreeToggle<cr>
+
+if has("persistent_undo")
+  set undodir=~/.undodir/
+  set undofile
+endif
