@@ -38,6 +38,16 @@ set ruler " Always display cursor position
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" == ap/vim-buftabline ==
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+
+" == jlanzarotta/bufexplorer ==
+nmap <F12> <Esc>:BufExplorer<cr>
+vmap <F12> <esc>:BufExplorer<cr>
+imap <F12> <esc>:BufExplorer<cr>
+
 " == scrooloose/syntastic ==
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -71,7 +81,6 @@ inoremap <C-\> <ESC>:NERDTreeToggle<CR>
 " == mhartington/oceanic-next ==
 " enable italics, disabled by default
 let g:oceanic_next_terminal_italic = 1
-
 " enable bold, disabled by default
 let g:oceanic_next_terminal_bold = 1
 
